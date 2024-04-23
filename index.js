@@ -2,8 +2,6 @@ const express = require ('express');
 const fs = require('fs');
 const path = require ("path");
 const app = express();
-// const bodyParser = require ('body-parser')
-// app.use(bodyParser.json())
 
 app.get('/' , (req,res) => {
     res.send("Server starter")
@@ -27,7 +25,6 @@ app.post("/createfile", (req,res) => {
     })
  })
   
-
 app.get('/retrievefiles' , (req,res) => {
     const folderPathIs = 'files'
     fs.readdir(folderPathIs ,(err , totalFiles) => {
@@ -38,7 +35,6 @@ app.get('/retrievefiles' , (req,res) => {
         }
     })
 })
-
 
 app.listen(4003,()=>{
     console.log("Server started successfully")
