@@ -4,7 +4,7 @@ const path = require ("path");
 const app = express();
 
 app.get('/' , (req,res) => {
-    res.send("Server starter")
+    res.send("Server started successfully")
 })
 
 app.post("/createfile", (req,res) => {
